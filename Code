@@ -1,0 +1,6 @@
+from pytube import YouTube 
+# link of the video to be downloaded 
+link=input("Provide Link")
+yt = YouTube(link) 
+my_video = yt.streams.get_highest_resolution()
+my_video.download()
